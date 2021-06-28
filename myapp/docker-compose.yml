@@ -10,6 +10,8 @@ services:
     env_file:
       - .env/development/web
       - .env/development/database
+    depends_on:
+      - database
   webpack_dev_server:
     build: .
     command: ./bin/webpack-dev-server
